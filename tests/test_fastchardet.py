@@ -37,10 +37,10 @@ def test_esoteric():
     a = lambda code: fastchardet.detect(code)["encoding"]
 
     # High Bytes
-    print a("High Byte:\x91")
+    print(a("High Byte:\x91"))
     assert a("High Byte:\x91") == "windows-1252"
 
     # UTF-8 without BOM
-    print a("\xc2\xbc + \xc2\xbd = \xcd\xbe")
+    print(a("\xc2\xbc + \xc2\xbd = \xcd\xbe"))
     assert a("\xc2\xbc + \xc2\xbd = \xcd\xbe") == "utf_8"
 
