@@ -18,7 +18,7 @@
 __version__ = "0.1"
 
 def detect(aBuf):
-    import universaldetector
+    from chardet import universaldetector
     u = universaldetector.UniversalDetector()
     u.reset()
     u.feed(aBuf)
